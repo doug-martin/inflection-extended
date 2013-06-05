@@ -164,7 +164,7 @@
             module.exports = defineString(require("extended"), require("is-extended"), require("array-extended"), require("arguments-extended"));
 
         }
-    } else if ("function" === typeof define) {
+    } else if ("function" === typeof define && define.amd) {
         define(["extended", "is-extended", "array-extended", "arguments-extended"], function (extended, is, array, args) {
             return defineString(extended, is, array, args);
         });
